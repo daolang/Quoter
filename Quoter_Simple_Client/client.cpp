@@ -9,7 +9,7 @@ int ACE_TMAIN (int argc, ACE_TCHAR* argv[])
 		// First initialize the ORB, that will remove some arguments...
 		CORBA::ORB_var orb =
 			CORBA::ORB_init (argc, argv);
-
+		
 		// There must be at least two arguments, the first is the factory
 		// name, the rest are the names of the stock symbols we want to
 		// get quotes for.
