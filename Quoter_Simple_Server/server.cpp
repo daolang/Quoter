@@ -3,7 +3,7 @@
 //
 
 #include "Stock_Factory_i.h"
-//#include "Stock_i.h"
+#include "tao/IORTable/IORTable.h"
 #include "ace/streams.h"
 
 int ACE_TMAIN (int argc, ACE_TCHAR* argv[])
@@ -64,10 +64,25 @@ int ACE_TMAIN (int argc, ACE_TCHAR* argv[])
 		CORBA::Object_var stock_factory =
 			child_poa->id_to_reference (oid.in ());
 
+		CORBA::Object_var table_object =
+			orb->resolve_initial_references("IORTable");
+
 		// Stringify all the object referencs.
 		CORBA::String_var ior = orb->object_to_string (stock_factory.in ());
-		// Print them out !
-		cout << ior.in () << endl;
+		
+		IORTable::Table_var adapter =
+			IORTable::Table::_narrow (table_object.in ());
+		if (CORBA::is_nil (adapter.in ()))
+		{
+			ACE_ERROR ((LM_ERROR, "Nil IORTable\n"));
+		}
+		else
+		{
+			CORBA::String_var ior =
+				orb->object_to_string (stock_factory.in ());
+
+			adapter->bind ("childPOA", ior.in ());
+		}
 
 		orb-> run ();
 

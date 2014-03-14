@@ -28,8 +28,8 @@
 // TAO_IDL - Generated from
 // d:\ace_wrappers\tao\tao_idl\be\be_codegen.cpp:461
 
-#ifndef _TAO_IDL_QUOTERS_2VDR4I_H_
-#define _TAO_IDL_QUOTERS_2VDR4I_H_
+#ifndef _TAO_IDL_QUOTERS_GQSBSJ_H_
+#define _TAO_IDL_QUOTERS_GQSBSJ_H_
 
 #include /**/ "ace/pre.h"
 

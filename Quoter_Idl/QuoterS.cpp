@@ -29,8 +29,8 @@
 // TAO_IDL - Generated from
 // d:\ace_wrappers\tao\tao_idl\be\be_codegen.cpp:652
 
-#ifndef _TAO_IDL_QUOTERS_T2WM5J_CPP_
-#define _TAO_IDL_QUOTERS_T2WM5J_CPP_
+#ifndef _TAO_IDL_QUOTERS_WRQIFG_CPP_
+#define _TAO_IDL_QUOTERS_WRQIFG_CPP_
 
 
 #include "QuoterS.h"
